@@ -5,12 +5,18 @@ import styles from '../styles/Home.module.css';
 
 export default function Home() {
   const [data, setData] = useState([]);
+  const [path, setPath] = useState('');
+  const [pathPublic, setPathPublic] = useState('');
   const [dataPublic, setDataPublic] = useState([]);
 
   const importNowFromJson = async (id) => {
+    const path = `../json/products${id}.json`
+    setPath(path)
     setData((await import(`../json/products${id}.json`)).default);
   };
   const importNowFromJsonPublic = async (id) => {
+    const path = `../public/json/products${id}.json`
+    setPathPublic(path)
     setDataPublic((await import(`../public/json/products${id}.json`)).default);
   };
   return (
@@ -22,29 +28,31 @@ export default function Home() {
         />
       </Head>
 
-      <div className="row">
+      <br />
+      <div className="row container-fluid">
         <div className="col border rounded m-1">
+          <h4 className="text-center alert alert-info">
+            Dynamic Import DEMO From root/json/files...
+          </h4>
+          <hr />
           <div className={styles.container}>
-            <br />
-            <br />
-            <br />
             <button onClick={() => importNowFromJson(1)}>Import Now 1 </button>
             <button onClick={() => importNowFromJson(2)}>Import Now 2 </button>
             <button onClick={() => importNowFromJson(3)}>Import Now 3</button>
             <button onClick={() => importNowFromJson(4)}>Import Now 4</button>
             <button onClick={() => importNowFromJson(5)}>Import Now 5</button>
 
-            <h1>Dynamic Import DEMO From SRC</h1>
-
             <hr />
+            <h4>Path : {path}</h4>
             <pre>{JSON.stringify(data, null, 2)}</pre>
           </div>
         </div>
         <div className="col border rounded m-1">
+          <h4 className="text-center alert alert-info">
+            Dynamic Import DEMO From public/json/files...
+          </h4>
+          <hr />
           <div className={styles.container}>
-            <br />
-            <br />
-            <br />
             <button onClick={() => importNowFromJsonPublic(1)}>
               Import Now 1{' '}
             </button>
@@ -61,9 +69,9 @@ export default function Home() {
               Import Now 5
             </button>
 
-            <h1>Dynamic Import DEMO From Public</h1>
-
             <hr />
+            <h4>Path : {pathPublic}</h4>
+
             <pre>{JSON.stringify(dataPublic, null, 2)}</pre>
           </div>
         </div>

@@ -27,12 +27,16 @@ a {
 
 
 button{
-  display:  block;
   padding:  5px ;
-  margin:  10px;
-  font-size: 2em;
+  margin:  4px;
+  border-radius: 20px;
+  background-color: rgb(26, 105, 123);
+  color: white;
+  font-size:1em;
 }
 
 pre{
-  font-size: 1.5em;
+  font-size: 1em;
+  max-width: 500px;
+  overflow-x: scroll;
 }
