@@ -19,12 +19,11 @@ export default function Home() {
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
           rel="stylesheet"
-          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
         />
       </Head>
 
       <div className="row">
-        <div className="col">
+        <div className="col border rounded m-1">
           <div className={styles.container}>
             <br />
             <br />
@@ -41,7 +40,7 @@ export default function Home() {
             <pre>{JSON.stringify(data, null, 2)}</pre>
           </div>
         </div>
-        <div className="col">
+        <div className="col border rounded m-1">
           <div className={styles.container}>
             <br />
             <br />
