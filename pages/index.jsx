@@ -7,15 +7,19 @@ export default function Home() {
 
   const [data , setData] = useState([]) 
 
-  const importNow = async()=>{
-    setData((await import('../json/products.json')).default)
+  const importNow = async(id)=>{
+    setData((await import(`../json/products${id}.json`)).default)
   }
   return (
     <div className={styles.container}>
       <br />
       <br />
       <br />
-      <button onClick={importNow}>Import Now</button>
+      <button onClick={()=>importNow(1)}>Import Now 1 </button>
+      <button onClick={()=>importNow(2)}>Import Now 2 </button>
+      <button onClick={()=>importNow(3)}>Import Now 3</button>
+      <button onClick={()=>importNow(4)}>Import Now 4</button>
+      <button onClick={()=>importNow(5)}>Import Now 5</button>
 
      <h1>Dynamic Import DEMO</h1>
 

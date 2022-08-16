@@ -24,3 +24,15 @@ a {
     background: black;
   }
 }
+
+
+button{
+  display:  block;
+  padding:  5px ;
+  margin:  10px;
+  font-size: 2em;
+}
+
+pre{
+  font-size: 1.5em;
+}

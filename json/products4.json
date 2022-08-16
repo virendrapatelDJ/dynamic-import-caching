@@ -1,0 +1,17 @@
+[
+  {
+    "id": 5,
+    "title": "iPhone 9",
+    "description": "An apple mobile which is nothing like apple",
+    "thumbnail": "https://dummyjson.com/image/i/products/1/thumbnail.jpg"
+  },
+  {
+    "id": 6,
+    "title": "iPhone 12",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 549,
+    "brand": "Apple",
+    "category": "smartphones",
+    "thumbnail": "https://dummyjson.com/image/i/products/1/thumbnail.jpg"
+  }
+]
