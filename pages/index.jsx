@@ -8,7 +8,7 @@ export default function Home() {
   const [data , setData] = useState([]) 
 
   const importNow = async(id)=>{
-    setData((await import(`../json/products${id}.json`)).default)
+    setData((await import(`../public/json/products${id}.json`)).default)
   }
   return (
     <div className={styles.container}>
