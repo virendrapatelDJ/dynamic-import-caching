@@ -1,0 +1,17 @@
+[
+  {
+    "id": 134,
+    "title": "iPhone 23",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 549,
+    "discountPercentage": 12.96
+   
+  },
+  {
+    "id": 342,
+    "title": "iPhone 345",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 549
+   
+  }
+]
